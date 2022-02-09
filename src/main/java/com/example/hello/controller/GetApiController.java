@@ -1,6 +1,6 @@
 package com.example.hello.controller;
 
-import com.example.hello.dto.UserRequest;
+import com.example.hello.dto.UserRequestDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -66,7 +66,7 @@ public class GetApiController {
     // ?user=willy&email=willy@kim.com&age=28&address=서울시
     // param을 미리 만들어 둔 dto로 나타낼 경우
     @GetMapping("/query-param-3") // 이런 경우 @RequestParam 어노테이션은 붙이지 않음!
-    public String queryParam2(UserRequest userRequest) {
+    public String queryParam2(UserRequestDto userRequest) {
         System.out.println(userRequest.getName());
         System.out.println(userRequest.getEmail());
         System.out.println(userRequest.getAge());
